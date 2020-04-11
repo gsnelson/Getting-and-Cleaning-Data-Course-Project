@@ -1,3 +1,8 @@
+## Getting and Cleaning Data Course Project Code Book
+
+### Libraries / Functions
+`data.table` - fread function <br>
+`dplyr` - pull, select, arrange, group_by, summarize_all
 
 * Create objects to store the paths and filenames for the files needed for the project:
 

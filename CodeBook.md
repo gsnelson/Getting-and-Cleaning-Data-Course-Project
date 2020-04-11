@@ -1,7 +1,7 @@
 ## Getting and Cleaning Data Course Project Code Book
 
 ### Libraries / Functions
-`data.table` - fread function
+`data.table` - fread function <br>
 `dplyr` - pull, select, arrange, group_by, summarize_all
 
 ### Inputs

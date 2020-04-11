@@ -24,7 +24,7 @@ My run_analysis.R script performs the following import actions:
 | `col_names_loc`       | *(.data/UCI HAR Dataset/features.txt)*            | column headings for the X test and train measurements |
 | `activity_labels_loc` | *(.data/UCI HAR Dataset/activity_labels.txt)*     | descriptions for the y test and train data            |
 
-![transformation]("C:\Users\gscot\OneDrive\Documents\transform.jpg")
+![transformation]("transform.jpg")
 
 ##### **Dataset Variables and Variable Names**
 The source project dataset contains 561 variables/measurements that are multi-

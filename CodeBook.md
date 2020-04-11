@@ -4,6 +4,13 @@
 `data.table` - fread function <br>
 `dplyr` - pull, select, arrange, group_by, summarize_all
 
+### Inputs
+The data used for this project is located on the UC Irvine Machine Learning Repository [web site](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). The data files reside in a single zip file. *Note: As will be seen below, the data contained within the zip file is organized into test and train folders to facilitate machine learning techniques such as linear regression.*
+My run_analysis.R script performs the following import actions:
+* Verifies that a `.data` folder exists in the project folder. If not, one is created.
+* Downloads the zip file from the UC Irvine site to the `.data` folder
+* Unzips the zip file contents to the `.data/UCI HAR Dataset` folder
+* Deletes the zip file from the `.data` folder
 * Create objects to store the paths and filenames for the files needed for the project:
 
 | Object                | Location                                          | Description                                           |

@@ -5,7 +5,7 @@
 `dplyr` - pull, select, arrange, group_by, summarize_all functions
 
 ### Inputs
-The data used for this project is located on the UC Irvine Machine Learning Repository [web site](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). The data files reside in a single zip file. *Note: As will be seen below, the data contained within the zip file is organized into test and train folders to facilitate machine learning techniques such as linear regression.*
+The data used for this project is located on the UC Irvine Machine Learning Repository [web site](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). The data files reside in a single zip file. *Note: As will be seen below, the data contained within the zip file is organized into test and train folders to facilitate machine learning techniques such as linear regression.*<br><br>
 My run_analysis.R script performs the following import actions:
 * Verifies that a `.data` folder exists in the project folder. If not, one is created.
 * Downloads the zip file from the UC Irvine site to the `.data` folder
@@ -27,9 +27,14 @@ My run_analysis.R script performs the following import actions:
 * Uses the fread function to load the data files into R objects. This step also performs parsing of the data into columns, stripping of whitespace, removing any blank rows and assigning temporary column names where needed.
 
 ## Transformations
-Because of the way the data is structured (test vs. train, subject and activity data stored separately from the measurements), the majority of the transformation work deals with joining all of the related files together. The cbind and rbind functions were used to perform this action.
-The only modification to the data itself involved replacing the activity codes (i.e. 1, 2, 3...) with their descriptive equivalent (i.e. Walking, Standing, Walking Upstairs...) as required for the project.
-
+Because of the way the data is structured (test vs. train, subject and activity data stored separately from the measurements), the majority of the transformation work deals with joining all of the related files together. The cbind and rbind functions were used to perform this action.<br><br>
+The only modification to the data itself involved replacing the activity codes (i.e. 1, 2, 3...) with their descriptive equivalent (i.e. Walking, Standing, Walking Upstairs...) as required for the project.<br><br>
+The project requirements stated that a subset containing only those variables measuring mean and standard deviation be created. For my script, this reduced the original 561 variables down to 66. Using a strict interpretation, I chose to exclude the 13 variables pertaining to Mean Frequency (meanfreq) as being outside the scope of the assignment requirements.<br><br>
+I used `dplyr` functions to:
+* `select` - create the subset
+* `arrange` - sort the observations by subject (participant) and activity
+* `group_by` - group the observations by subject and activity
+* `summarize_all` - calculate the mean for each subject and activity<br>
 ###### Transformation Diagram
 <img src="transformation diagram.png" width=800 height=800 align="center" title="Transformation Diagram" />
 
@@ -37,7 +42,7 @@ The only modification to the data itself involved replacing the activity codes (
 The source project dataset contains 561 variables/measurements that are multi-
 dimensional in nature. The subset required for the assignment captures only
 those 66 variables that measure mean and standard deviation. Using a strict
-interpretation, I've chosen to exclude the 13 variables pertaining to Mean
+interpretation, I chose to exclude the 13 variables pertaining to Mean
 Frequency (meanfreq) as being outside the scope of the assignment requirements.
 
 At a high level, the subsetted variables are classified by:

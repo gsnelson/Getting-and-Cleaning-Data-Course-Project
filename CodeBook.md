@@ -27,10 +27,11 @@ My run_analysis.R script performs the following import actions:
 * Uses the fread function to load the data files into R objects. This step also performs parsing of the data into columns, stripping of whitespace, removing any blank rows and assigning temporary column names where needed.
 
 ## Transformations
-Because of the way the data is structured (test vs. train, subject and activity data stored separately from the measurements), the majority of the tranformation work deals with joining all of the related files together. The cbind and rbind functions were used to perform this action.
+Because of the way the data is structured (test vs. train, subject and activity data stored separately from the measurements), the majority of the transformation work deals with joining all of the related files together. The cbind and rbind functions were used to perform this action.
+The only modification to the data itself involved replacing the activity codes (i.e. 1, 2, 3...) with their descriptive equivalent (i.e. Walking, Standing, Walking Upstairs...) as required for the project.
 
 ###### Transformation Diagram
-<img src="transformation diagram.png" width=800 height=600 align="center" title="Transformation Diagram" />
+<img src="transformation diagram.png" width=800 height=800 align="center" title="Transformation Diagram" />
 
 ##### **Dataset Variables and Variable Names**
 The source project dataset contains 561 variables/measurements that are multi-

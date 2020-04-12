@@ -24,7 +24,13 @@ My run_analysis.R script performs the following import actions:
 | `col_names_loc`       | *(.data/UCI HAR Dataset/features.txt)*            | column headings for the X test and train measurements |
 | `activity_labels_loc` | *(.data/UCI HAR Dataset/activity_labels.txt)*     | descriptions for the y test and train data            |
 
-<img src="transformation diagram.png" width=800 height=600 align="center" title="Transformation Diagram"/>
+* Uses the fread function to load the data files into R objects. This step also performs parsing of the data into columns, stripping of whitespace, removing any blank rows and assigning temporary column names where needed.
+
+## Transformations
+Because of the way the data is structured (test vs. train, subject and activity data stored separately from the measurements), the majority of the tranformation work deals with joining all of the related files together. The cbind and rbind functions were used to perform this action.
+
+###### Transformation Diagram
+<img src="transformation diagram.png" width=800 height=600 align="center" title="Transformation Diagram" />
 
 ##### **Dataset Variables and Variable Names**
 The source project dataset contains 561 variables/measurements that are multi-

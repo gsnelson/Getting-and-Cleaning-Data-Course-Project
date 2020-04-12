@@ -35,7 +35,7 @@ I used `dplyr` functions to:
 * `arrange` - sort the observations by subject (participant) and activity
 * `group_by` - group the observations by subject and activity
 * `summarize_all` - calculate the mean for each subject and activity<br>
-###### Transformation Diagram
+The diagram below illustrates the transformation process
 <img src="transformation diagram.png" width=800 height=800 align="center" title="Transformation Diagram" />
 
 ##### **Dataset Variables and Variable Names**

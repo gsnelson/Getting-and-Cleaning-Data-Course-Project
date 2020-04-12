@@ -53,3 +53,5 @@ The variable names of the original dataset (561 variables) and the mean/standard
 I started by converting all of the variable names to lower case and removing illegal characters '(', ')' and '-' (not syntactically correct). I then began the work to remove the periods but realized doing so would make the names difficult to understand. `tbodyacc.mean.x` would become `tbodyaccmeanx`.<br><br>
 I consulted the Comprehensive R Archive Network (CRAN) FAQ [page](https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-are-valid-names_003f) and the tidyverse style guide [page](https://style.tidyverse.org/syntax.html) and learned that underscores are acceptable in variable names. The CRAN site included periods as being acceptable too but I chose to use the underscore as being more ledgible. `tbodyacc.mean.x` would become `tbodyacc_mean_x`.
 
+## Output
+The script writes the data stored in the summarized_data object to a csv file. The csv is saved to the `.data` folder of the project folder.

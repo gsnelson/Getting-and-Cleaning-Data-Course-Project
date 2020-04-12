@@ -31,4 +31,4 @@ The run_analysis.R script performs the following tasks (in order):
 10. Sort the subset by subject (participant) and activity
 11. Group the subset by subject (participant) and activity
 12. Summarize the subset observations by calculating the mean for each subject and each activity
-13. Write the results to a csv file and save it to the `.data` folder
+13. Write the results to a txt file and save it to the `.data` folder

@@ -8,15 +8,15 @@ The study data, available on the UC Irvine repository site, is stored in a zip a
 * `X_test.txt` and `X_train.txt` - contain the measurements collected directly from the smartphones, as well as the additional measurements extrapulated from that data
 * `subject_test.txt` and `subject_train.txt` - contain the subject (participant) IDs represented as integer values. These files match row-for-row with the X_test and X_train files
 * `y_test.txt` and `y_train.txt` - contain the activity IDs represented as integer values. These files match row-for-row with the X_test/subject_test and X_train/subject_train files
-* `activity_labels.txt' - contains the character descriptions of the activity IDs (i.e. 1 = Walking)
-* `features.txt` - contains the variable (column) names for the measurements. These files match column-for-column with the X_test and X_train files<br>
+* `activity_labels.txt` - contains the character descriptions of the activity IDs (i.e. 1 = Walking)
+* `features.txt` - contains the variable (column) names for the measurements. These files match column-for-column with the X_test and X_train files<br><br>
 
 The goal of this project is to transform the smartphone study data into a tidy dataset. Specifically, the requirements are:<br>
 1. Merge the training and the test sets to create one data set
 2. Extract only the measurements on the mean and standard deviation for each measurement
 3. Use descriptive activity names to name the activities in the data set
 4. Appropriately label the data set with descriptive variable names
-5. Create a second, independent tidy data set with the average of each variable for each activity and each subject (as a text export file)
+5. Create a second, independent tidy data set with the average of each variable for each activity and each subject (as a text export file)<br><br>
 
 The run_analysis.R script performs the following tasks (in order):
 1. Download the zip file from the UC Irvine repository site to the project `.data` folder

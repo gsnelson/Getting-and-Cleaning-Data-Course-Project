@@ -34,28 +34,14 @@ I used `dplyr` functions to:
 * `select` - create the subset
 * `arrange` - sort the observations by subject (participant) and activity
 * `group_by` - group the observations by subject and activity
-* `summarize_all` - calculate the mean for each subject and activity<br>
+* `summarize_all` - calculate the mean for each subject and activity<br><br>
 The diagram below illustrates the transformation process
 <img src="transformation diagram.png" width=800 height=800 align="center" title="Transformation Diagram" />
 
-##### **Dataset Variables and Variable Names**
-The source project dataset contains 561 variables/measurements that are multi-
-dimensional in nature. The subset required for the assignment captures only
-those 66 variables that measure mean and standard deviation. Using a strict
-interpretation, I chose to exclude the 13 variables pertaining to Mean
-Frequency (meanfreq) as being outside the scope of the assignment requirements.
-
-At a high level, the subsetted variables are classified by:
-* ***Domain:*** Time (t) or Frequency (f)
-* ***Instrument:*** Accelerometer (acc) or Gyroscope (gyro)
-* ***Linear Axis Signal Measurements:***
-	* X: left (+)/right (-)
-	* Y: forward (+)/backward (-)
-	* Z: up (+)/down (-)
-* ***Measures of Magnitude***
-
-Per the presentation, Editing Text Variables, variable names should:
+#####Variable Names
+Per Professor Leek's presentation, Editing Text Variables, variable names should:
 - be all be lowercase when possible
 - be non-duplicative
 - not include underscores, periods or whitespace
-- be descriptive
+- be descriptive<br>
+Implicit in the list is the requirement that variable names be syntactically correct (ability to be intrepreted by R without error)

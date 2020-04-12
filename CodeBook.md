@@ -38,10 +38,18 @@ I used `dplyr` functions to:
 The diagram below illustrates the transformation process
 <img src="transformation diagram.png" width=800 height=800 align="center" title="Transformation Diagram" />
 
-#####Variable Names
+##### Variable Names
+One of the project requirements is to appropriately label the data set with descriptive variable names.
+
 Per Professor Leek's presentation, Editing Text Variables, variable names should:
 - be all be lowercase when possible
 - be non-duplicative
 - not include underscores, periods or whitespace
 - be descriptive<br>
-Implicit in the list is the requirement that variable names be syntactically correct (ability to be intrepreted by R without error)
+
+*Implicit in the list is the requirement that variable names be syntactically correct (ability to be intrepreted by R without error)*
+
+The variable names of the original dataset (561 variables) and the mean/standard deviation only subset (66 variables) are complex due to the fact they represent several dimensional measurements (time vs. frequency, accelerometer vs. gyroscope, X, Y & Z axes) and calculations (mean, coefficent, standard deviation, etc.). I chose to leave the names themselves untouched under the assumption that they have to be meaningful to consumer of the output the run_analysis.R script produces. I, therefore, focused on making the structure of the variable names tidy.<br>
+I started by converting all of the variable names to lower case and removing illegal characters '(', ')' and '-' (not syntactically correct). I then began the work to remove the periods but realized doing so would make the names difficult to understand. `tbodyacc.mean.x` would become `tbodyaccmeanx`.<br>
+I consulted the Comprehensive R Archive Network (CRAN) FAQ [page](https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-are-valid-names_003f) and the tidyverse style guide [page](https://style.tidyverse.org/syntax.html)
+

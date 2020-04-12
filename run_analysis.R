@@ -182,10 +182,11 @@ summarized_data <-
 
 
 ## write the summarized data to a text file
-write.csv(
+write.table(
 	summarized_data,
-	file = "./.data/GSN-tidydata.csv",
-	row.names = FALSE
+	file = "./.data/GSN-tidydata.txt",
+	row.names = FALSE,
+	col.names = TRUE,
 )
 
 
